@@ -1,0 +1,27 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int duration = 120; 
+    calculate(duration);
+
+    }
+
+    public static void calculate(int duration){
+        double charge;
+        int minutes = duration % 100;
+        int hours = duration - minutes;
+        charge = hours*0.4;
+        if (minutes > 30){
+            charge = charge +40;
+        }else{
+            if (minutes ==0){
+                charge = charge + 0;
+            }else{
+                charge = charge + 20;
+            }
+        }
+        System.out.print(charge);
+    }
+}
