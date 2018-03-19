@@ -3,41 +3,25 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        int duration = 120;
+        int duration = 0120;
         int[] totalvotes = new int[3];
     calculate(duration);
     playchoose(totalvotes);
     }
 
-    public static void calculate(int duration){
-        double charge;
+    public static void calculate(int duration){double charge;
         int minutes = duration % 100;
         int hours = duration - minutes;
         charge = hours*0.4;
-        if (minutes > 30){
-            charge = charge +40;
-        }else{
-            if (minutes ==0){
-                charge = charge + 0;
-            }else{
-                charge = charge + 20;
-            }
-        }
-        System.out.print(charge);
+        if (minutes > 30){charge = charge +40;
+        }else{if (minutes ==0){charge = charge + 0;}else{charge = charge + 20;}}System.out.print(charge);
     }
     private static void playchoose(int[] totalvotes){
         if (totalvotes[0] > totalvotes[1]){
-        if (totalvotes [0] > totalvotes[2]){
-            System.out.print("Play A");
-        }
-        else if (totalvotes[1] > totalvotes[2]){
-            System.out.print("Play B");
-        }
-        else if (totalvotes[2] > totalvotes[0] && totalvotes[2]> totalvotes[1]){
-            System.out.print("Play C");
-        }
-        else{
-            System.out.print("They have equal votes, choose a random one or something idk.");
+        if (totalvotes [0] > totalvotes[2]){ System.out.print("Play A");
+        }else if (totalvotes[1] > totalvotes[2]){System.out.print("Play B");
+        }else if (totalvotes[2] > totalvotes[0] && totalvotes[2]> totalvotes[1]){System.out.print("Play C");
+        }else{ystem.out.print("They have equal votes, choose a random one or something idk.");
         }
     }
 }}
